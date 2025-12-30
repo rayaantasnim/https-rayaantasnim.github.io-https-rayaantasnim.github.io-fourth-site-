@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Sign in</title>
+  <link rel="stylesheet" type="text/css" href="Tour.css">
+  <style>
+    .error { color: red; font-size: 24px; margin-top: 4px; }
+    .field { margin-bottom: 18px; }
+    .invalid { border: 1px solid red; }
+  </style>
+</head>
+<body>
+  <center>
+    <h1>Welcome to our special web.<br>
+    To sign in, give your informations.</h1><br><br>
+
+    <!-- Turn off native HTML5 validation so JS messages show -->
+    <form id="signinForm" novalidate action="Signed in.html">
+      <div class="field">
+        <label for="name">Name:</label><br>
+        <input type="text" id="name" placeholder="Mr/Mrs.">
+        <div id="nameError" class="error" aria-live="polite"></div>
+      </div>
+
+      <div class="field">
+        <label>Age:</label><br>
+        <input type="radio" name="age" id="age1"><label for="age1">1 to 6 years</label><br>
+        <input type="radio" name="age" id="age2"><label for="age2">7 to 18 years</label><br>
+        <input type="radio" name="age" id="age3"><label for="age3">19 to 40 years</label><br>
+        <input type="radio" name="age" id="age4"><label for="age4">40 to 60 years</label><br>
+        <input type="radio" name="age" id="age5"><label for="age5">Up to 60 years</label><br>
+        <div id="ageError" class="error" aria-live="polite"></div>
+      </div>
+
+      <div class="field">
+        <label for="email">G-mail:</label><br>
+        <input type="email" id="email" placeholder="something@browser.com">
+        <div id="emailError" class="error" aria-live="polite"></div>
+      </div>
+
+      <div class="field">
+        <label for="passcode">Passcode:</label><br>
+        <input type="password" id="passcode" placeholder="At least 8 character">
+        <div id="passcodeError" class="error" aria-live="polite"></div>
+      </div>
+
+      <div class="field">
+        <label>Choose your gender:</label><br>
+        <input type="radio" name="gender" id="male"><label for="male">Male</label>
+        <input type="radio" name="gender" id="female"><label for="female">Female</label>
+        <input type="radio" name="gender" id="children"><label for="children">Children</label>
+        <div id="genderError" class="error" aria-live="polite"></div>
+      </div>
+
+      <div class="field">
+        <label for="occupation">Occupation:</label><br>
+        <input type="text" id="occupation">
+        <div id="occupationError" class="error" aria-live="polite"></div>
+      </div>
+
+      <div class="field">
+        <label for="contact">Contact:</label><br>
+        <input type="number" id="contact" placeholder="XXXXXXXXXXXX">
+        <div id="contactError" class="error" aria-live="polite"></div>
+      </div>
+
+      <div class="field">
+        <label for="username">Username:</label><br>
+        <input type="text" id="username" placeholder="XXXXXXXX">
+        <div id="usernameError" class="error" aria-live="polite"></div>
+      </div>
+
+      <p>Your G-mail account's passcode is set for this username.</p>
+
+      <button type="submit" style="width:200px;">Sign in</button>
+    </form>
+  </center>
+
+  <script>
+    const form = document.getElementById("signinForm");
+
+    function showError(id, message) {
+      const el = document.getElementById(id);
+      el.textContent = message;
+    }
+
+    function markInvalid(inputEl) {
+      inputEl.classList.add("invalid");
+      inputEl.scrollIntoView({ behavior: "smooth", block: "center" });
+      inputEl.focus();
+    }
+
+    function clearErrors() {
+      document.querySelectorAll(".error").forEach(el => el.textContent = "");
+      document.querySelectorAll(".invalid").forEach(el => el.classList.remove("invalid"));
+    }
+
+    form.addEventListener("submit", function(event) {
+      clearErrors();
+
+      // Name
+      const name = document.getElementById("name");
+      if (name.value.trim() === "") {
+        showError("nameError", "Enter your name!");
+        event.preventDefault();
+        markInvalid(name);
+        return;
+      }
+
+      // Age
+      const ageSelected = document.querySelector("input[name='age']:checked");
+      if (!ageSelected) {
+        showError("ageError", "Select your Age!");
+        event.preventDefault();
+        // mark first radio to focus
+        markInvalid(document.getElementById("age1"));
+        return;
+      }
+
+      // Email (more flexible pattern)
+      const email = document.getElementById("email");
+      const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/;
+      if (!email.value.trim().match(emailPattern)) {
+        showError("emailError", "Enter a valid E-mail!");
+        event.preventDefault();
+        markInvalid(email);
+        return;
+      }
+
+      // Passcode
+      const passcode = document.getElementById("passcode");
+      if (passcode.value.length < 8) {
+        showError("passcodeError", "Passcode should at least 8 character!");
+        event.preventDefault();
+        markInvalid(passcode);
+        return;
+      }
+
+      // Gender
+      const genderSelected = document.querySelector("input[name='gender']:checked");
+      if (!genderSelected) {
+        showError("genderError", "Select your Gender!");
+        event.preventDefault();
+        markInvalid(document.getElementById("male"));
+        return;
+      }
+
+      // Occupation
+      const occupation = document.getElementById("occupation");
+      if (occupation.value.trim() === "") {
+        showError("occupationError", "Enter your Occupation!");
+        event.preventDefault();
+        markInvalid(occupation);
+        return;
+      }
+
+      // Contact (digits only, 10–12)
+      const contact = document.getElementById("contact");
+      const digitsOnly = contact.value.replace(/\D/g, "");
+      if (digitsOnly.length < 10 || digitsOnly.length > 12) {
+        showError("contactError", "Contact number should contain 10–12 digit!");
+        event.preventDefault();
+        markInvalid(contact);
+        return;
+      }
+
+      // Username
+      const username = document.getElementById("username");
+      if (username.value.trim() === "") {
+        showError("usernameError", "Enter a Username!");
+        event.preventDefault();
+        markInvalid(username);
+        return;
+      }
+
+      // If everything is valid, you can proceed (form will submit)
+    });
+  </script>
+</body>
+</html>

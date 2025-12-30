@@ -1,0 +1,56 @@
+h1{
+	font-family:Algerian;
+	font-size:35px;
+	background:lightblue;
+}
+
+h6{
+	font-family:Vrinda;
+	background:#d37be3;
+	font-size:30px;
+	padding:0px;
+	margin:0px;
+}
+
+nav{
+	display:flex;
+	gap:30px;
+	background-color:lightcyan;
+	height:200px;
+	div{
+		padding-top:10px;
+	}
+
+	img{
+		width:75%;
+	}
+
+	a{
+		text-decoration:none;
+		color:blue;
+		font-size:30px;
+		font-family:Algerian;
+		padding:10px;
+	}
+
+	.btn{
+		padding:10px;
+		padding-left:25px;
+		padding-right:25px;
+		background-color:lightseagreen;
+		color:yellow;
+		border-radius:20px;
+		box-shadow:5px 5px 10px lightcoral;
+	}
+
+	a:hover{
+		background:linear-gradient(lightsalmon,lightgreen);
+		color:black;
+		font-weight:bold;
+	}
+}
+
+body{
+	background-color:lightgreen;
+	margin:0px;
+}

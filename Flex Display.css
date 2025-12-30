@@ -1,0 +1,65 @@
+body{
+	font-family:Vrinda;
+}
+
+.para1{
+	font-size:20px;
+	label{
+		color:gray;
+	}
+	h4{
+		color:blue;
+	}
+}
+
+.para2{
+	font-size:20px;
+	h4{
+		color:red;
+	}
+	label{
+		color:gray;
+	}
+}
+
+.para3{
+	font-size:20px;
+	h4{
+		color:orange;
+	}
+	label{
+		color:gray;
+	}
+}
+
+.main{
+	display:flex;
+	margin:0px;
+	gap:10px;
+	div{
+		padding:10px;
+		width:335px;
+		border:5px lightpink; solid;
+		margin:10px;
+		text-align:justify;
+		border-radius:50px;
+		box-shadow:5px 5px 10px rgba(0, 0, 0, 0.8);
+	}
+}
+
+hr{
+	color:black;
+}
+
+button{
+	border-radius:50px;
+	font-size:25px;
+	color:yellow;
+	background: linear-gradient(#ff00ee,lightsalmon);
+}
+
+button:hover{
+	color:red;
+	background:linear-gradient(lightsalmon,lightblue);
+	transform:scale(1.5);
+}

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Filter App</title>
+
+	<script src="https://cdn.jsdelivr.net/npm/p5@0.9.0/lib/p5.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.9.0/addons/p5.dom.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/p5@0.9.0/lib/addons/p5.sound.min.js"></script>
+    <script src="https://unpkg.com/ml5@0.4.3/dist/ml5.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+	
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+
+	<style>
+		.btn-info{
+			font-family:Vrinda;
+			font-size:20px;
+			border: 2px black solid;
+		}
+
+		.btn-info:hover{
+			border: 4px black solid;
+			transform: scale(1.25);
+		}
+
+		canvas{
+			margin-top:200px;
+		}
+	</style>
+</head>
+
+
+<body class="bg-success-subtle">
+
+	<center><br>
+		<h2>
+			Image Filtering App
+		</h2>
+	</center>
+
+	<center><br>
+		<button class="btn btn-info" onclick="setup()">Click to start Filtering</button>
+		<button onclick="snap()" class="btn btn-info">Click to download</button>
+	</center>
+
+	<br><br><br><center><form action="Signed in.html">
+		<button style="background: lightcoral; color: white; border-radius:30px; font-size:30px;">Go Back</button>	
+	</form><br><Br><br></center>
+
+	<script src="Filter App.js"></script>
+</body>
+</html>

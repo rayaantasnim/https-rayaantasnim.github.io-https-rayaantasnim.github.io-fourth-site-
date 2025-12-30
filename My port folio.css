@@ -1,0 +1,192 @@
+body{
+	background-image: url(Down.jfif); 
+	background-size: 100%;
+	background-attachment: fixed;
+	background-repeat: no-repeat;
+	font-size: 15px;
+	margin-left:0px; 
+	font-family:vrinda;
+}
+
+div{
+	color: Yellow;
+	background: #E6E6FA;
+	margin-bottom:10px;
+}
+
+span{ 
+	color:black;
+	font-weight:italic;
+	font-style:bold; 
+	font-size:17px;
+	font-family:Algerian;
+}
+
+span:hover{
+	background-color:lightblue;
+	color:red;
+}
+
+.para1{
+	width:1000px;
+	color:black;
+	background-color:#FDFFB8;
+	text-align:left;
+	text-align:justify;
+	border:5px, red, solid;
+	padding:10px;
+}
+
+.para2{
+	width:1000px;
+	color:black;
+	background-color:lightpink;
+	text-align:left;
+	text-align:justify;
+	border:5px, rgba(148, 252, 3, 1.5), solid;
+	padding:10px;
+}
+
+.para3{
+	width:1000px;
+	color:black;
+	background-color:lightcyan;
+	text-align:left;
+	text-align:justify;
+	border:5px, rgba(252, 65, 3, 1.0), solid;
+	padding:10px;
+}
+
+.para4{
+	width:1000px;
+	color:black;
+	background-color:#B6F500;
+	text-align:left;
+	text-align:justify;
+	border:5px, red, solid;
+	padding:10px;
+}
+
+img{
+	border-radius:25%;
+	background-color:lightblue;
+	border:5px, rgba(36, 36, 212, 1.0), solid;
+	padding:7px;
+}
+
+.para5{
+	width:1000px;
+	background-color:FF8282;
+	color:black;
+	text-align:left;
+	border:5px, rgba(36, 36, 212, 1.0), solid;
+	padding:5px;
+}
+
+.para6{
+	width:1000px;
+	text-align:left;
+	background-color:#FFDCDC;
+	color:black;
+	border:5px, rgba(0,0,0, 1.0), solid;
+	padding:7px;
+}
+
+.para7{
+	width:1000px;
+	text-align:left;
+	background-color:#F5F5DC;
+	color:black;
+	border:5px, rgba(245, 32, 17, 1.0), solid;
+	padding:7px;
+}
+
+.para8{
+	width:1000px;
+	text-align:left;
+	background-color:#46f0df;
+	color:black;
+	border:5px, rgba(245, 150, 17, 1.0), solid;
+	padding:7px;
+}
+
+h4{
+	font-size:25px;
+	color:black;
+	background-color:white;
+	border:3px, black, solid;
+}
+
+h2{
+	background:#f6fa02;
+	border:2px, black, solid;
+	font-size:30px;
+}
+
+button{
+	font-size:30px;
+	background:linear-gradient(lightpink,lightblue);
+	color:black;
+}
+
+button:hover{
+	transform:scale(1.4);
+	background:linear-gradient(pink,yellow);
+	color:red;
+	cursor:pointer;
+}
+
+.para{
+	margin:5px;
+	gap:10px;
+	display:flex;
+
+	div{
+		padding: 10px;
+		width: 400px;
+		text-align: left;
+		border: 5px solid lightpink;
+		margin: 10px;
+		border-radius: 50px;
+		box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.8);
+	}
+}
+
+h3{
+	font-size:30px;
+	text-align:center;
+	font-family:Algerian;
+}
+
+.para9{
+	background-color:;
+	color:black;
+	p{
+		text-align:left;
+	}
+}
+
+.para10{
+	background-color:lightgreen;
+	color:black;
+	p{
+		text-align:left;
+	}
+}
+
+.para11{
+	background-color:lightskyblue;
+	color:black;
+	p{
+		text-align:left;
+	}
+}
+
+.para12{
+	background-color:lightseagreen;
+	color:black;
+	p{
+		text-align:left;
+		color: black;
+	}
+}
